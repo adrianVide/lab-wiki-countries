@@ -1,3 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(158, 178, 179);
+  background-color: rgb(61, 67, 67);
+  border-color: rgb(61, 67, 67);
+
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -17,7 +28,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(158, 178, 179);
 }
 
 .App-link {
@@ -31,4 +42,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.link-text:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.Topbar {
+  background-color: rgb(158, 178, 179);
+  color: rgb(61, 67, 67);
+}
+
+.Footer { 
+  min-height: 3vw;
+  background-color: rgb(158, 178, 179);
+
+}
+
+.list-group-item{
+  background-color: rgb(61, 67, 67)!important;
+
 }

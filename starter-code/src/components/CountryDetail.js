@@ -16,7 +16,7 @@ export const CountryDetail = () => {
       {countryCopy.map((eachCountry, index) => {
         return (
           <div className="list-group">
-            <Link to={`/${eachCountry.cca3}`}>
+            <Link className="link-text" to={`/${eachCountry.cca3}`}>
               <div
                 className="list-group-item list-group-item-action"
                 key={eachCountry.cca3}
@@ -28,7 +28,7 @@ export const CountryDetail = () => {
           </div>
         );
       })}
-      ;
+      
     </div>
   );
 };

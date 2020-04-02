@@ -10,7 +10,7 @@ export function Detail(props) {
 
   const foundCountry = getCountry(params.id);
 
-  console.log(foundCountry);
+//   console.log(foundCountry);
 
   return (
     <div className="col-7">
@@ -18,13 +18,13 @@ export function Detail(props) {
         {foundCountry.flag} {foundCountry.name.common}
       </h1>
       <h3>{foundCountry.capital}</h3>
-      <h3>{foundCountry.area} sqm</h3>
+      <h3>{foundCountry.area} km<sup>2</sup></h3>
       {foundCountry.borders.map(eachBorderCountry => {
         return (
-          <Link to={getCountry(eachBorderCountry).cca3}>
-            <div key={eachBorderCountry}>
-              {getCountry(eachBorderCountry).name.common}
-            </div>
+          <Link key={eachBorderCountry} to={getCountry(eachBorderCountry).cca3}>
+              <div>{getCountry(eachBorderCountry).name.common}</div>
+              {/* {console.log(getCountry(eachBorderCountry).name.common)}
+              {console.log(typeof(foundCountry.area))} */}
           </Link>
         );
       })}
