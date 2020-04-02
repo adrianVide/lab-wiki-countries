@@ -6,12 +6,21 @@ import { CountryDetail } from "./components/CountryDetail";
 import { Detail } from "./components/Detail";
 
 function App() {
-  return (
-    <div className="App">
-      <CountryDetail />
-      <Switch>
-        <Route exact path="/:id" component={Detail} />
-      </Switch>
+  return (<div>
+    <h1 style={{ textAlign: "center" }}>Countries</h1>
+
+    <div className="App row">
+      <div className="col-5" style={{ maxHeight: "90vh", overflow: "scroll" }}>
+        {" "}
+        <CountryDetail />
+      </div>
+
+      {/* <div className="col-7"> */}
+        <Switch>
+          <Route exact path="/:id" component={Detail} />
+        </Switch>
+      {/* </div> */}
+    </div>
     </div>
   );
 }
